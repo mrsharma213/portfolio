@@ -8,6 +8,14 @@
 <meta name="apple-mobile-web-app-title" content="Built by Jet">
 <meta name="theme-color" content="#000000">
 <title>⚡ Built Together</title>
+<script>
+(function(){
+  if(sessionStorage.getItem('auth')==='1')return;
+  var p=prompt('Passcode:');
+  if(p!=='7586'){document.documentElement.innerHTML='<body style="background:#000;color:#333;display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif">Access denied</body>';throw'';}
+  sessionStorage.setItem('auth','1');
+})();
+</script>
 <style>
 @import url('https://rsms.me/inter/inter.css');
 * { margin: 0; padding: 0; box-sizing: border-box; }
